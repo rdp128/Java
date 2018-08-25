@@ -1,0 +1,19 @@
+
+YouTuber - Java tutorials Blog
+
+----------------------------
+Overload - Yes
+
+Override - NO
+
+Final/static/abstract keyword - Not allow with Constructor 
+    because any way we can not override constrctor so why do we've to put restriction
+	e.g. if there is no road then why you have to put sign board(one way/ Two Way)
+
+Changing Constructor in java - yes using this keyword
+
+Inherit - NO
+
+Private/Protected/default - YES
+
+-we can only initialize instance variable in Constructor(can't initialize static varible)

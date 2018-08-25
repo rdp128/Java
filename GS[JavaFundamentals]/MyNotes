@@ -1,0 +1,74 @@
+-For loop patterns done
+
+-Basic video watched slidenerd | vee-kay | Natahn Schutz done
+
+-Sorting algorithms Selection |Bubble Sort | Linear Search done
+
+-ArrayList | String | Number | ARRAY | COLLECTIONS problem working on it
+
+STRING PROBLEM DONE SO FAR
+-Reverse 
+-check Palindrome or not
+-Iterate through string using charAt() method
+-Count total no of word in given string - split | iterate over split array | string.length 
+-Count each word length in given string - split | iterate over split array | use count++
+-Print each word Inititals - split | iterate over split array | charAt() method
+-Print last word of each string - split | iterate over split array | charAt(str.length()-1) method
+-before decimal and after decimal how many number - convert double into string | use indexOf('.') and for after digit count (st.lenght()-1) - st.index('.)
+-Each letter Count - UpperCase | for loop for char another for loop for iterate string | if (st.charAt(i)== j) count++ | print
+-Sort String/Array - split | use selection sort | use compareTo()>0 method | Swap 
+-remove duplicate in string/array - use hashSet
+-remove particular character from string - iterate | if ch == '-' | substring(0,i) and (i+1) add it | print
+-Make first character(letter) capital -split |iterate|store array in string |get first character|convert it into string and use toUpperCase()|print
+-First Non Repeating Character -If character is repeated then their index position is different |If character is not repeated then their indexof() and lastIndexOf() is same
+-
+
+8) Write a java program to check whether one string is a rotation of another?
+
+9) Write a java program to check whether two strings are anagram or not?
+
+
+15) How do you find longest substring without repeating characters in the given string?
+
+17) Write a java program to find all permutations of a string?
+
+
+
+
+
+14) Write a java program to prove that strings are immutable in java?
+
+
+
+
+
+
+ARRAYS
+-Find Duplicate element in array 
+ -string/integer array - use HashSet | use add method == true for remove dups but use false to find dups
+ -best use HashMap |iterate over array | containsKey method | keySet to get key 
+-2nd largest element in Integer array
+-largest/smallest/sum/average of integer array
+-Sorting integer array - Selection | bubble | linear search
+-Reverse array
+-Check equality of array - if length is equal then use for loop and if they are not equal then flag = 1 | if(flag=0) then equal else not equal
+-pairs of elements in an integer array whose sum is equal to a given number -Easy I got it!
+-Copy one array To Blank array - create new array of existing array length | iterate over old array | a1[j]=a[i] j++ |print
+-FindAllLeaders no - Easy I got it!
+-Move all zero/negative/positive on one side of array - create new array of existing array length | iterate over old array | a1[i]!=a[i] | a1[j]=a[i] j++ |print
+-Longest/shortest name - Iterate over array | store array in string | if(store.lenght() > max) then max=store.length() - name = store | print
+-Missing Number = sum of all element in array | iterate through small element to large element and sum of that | sum1-sum
+-Count Occurrence of each element - Use HashMap | containsKey() Method 
+-Remove Duplicate - use HashMap | ContainsKey() Method | keySet() Method | iterate it and print it
+-
+
+NUMBERS
+-nth prime number-done
+-nth even/odd number-done
+-nth strong number -done
+-nth perfect number - done
+-nth Fibonacci series-done
+-nth armstronng number - done
+-nth ugly number -done
+-Kaprekar numbers
+
