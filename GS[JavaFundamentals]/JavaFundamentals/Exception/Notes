@@ -1,3 +1,7 @@
+Checked Exception ==> Always have to handle it 
+UnChecked Exception ==> not worry about it to  handle it 
+
+
 --->>Throw Keyword 
 	-throw keyword is used to explicitly throw an exception.
 	-we can either throw checked or unchecked exceptions.
@@ -12,6 +16,52 @@
 		  |   -----Creating Exception Object-------
 		  |
 		--Using throw keyword programmer hand over exception  object to JVM
+		
+	NOTE: i)When you have Unchecked(RunTime) Exception you don't need to worry about to handled it
+	        for e.g. public class Test {
+
+						public static void main(String[] args) 
+						{
+							int a = 10/0;
+							throw new ArithmeticException("Not Possible");//this is Unchecked Exception so it's okay if you don't handled it just throw it
+						}
+					}
+		  ii)When you have Checked(CompileTime) Exception you have 2 Options
+		     
+		     for e.g. public class Test {
+
+						public static void main(String[] args) 
+						{
+							int a = 10/0;
+							throw new Exception("Not Possible");//Compile Error because it's Checked Exception
+						}
+					}
+			 1) See below code  (Add throws mean declare it that you throwing checked Exception)
+			 	public class Test {
+
+					public static void main(String[] args) throws Exception
+					{
+						int a = 10/0;
+						throw new Exception("Not Possible");//Compile Error because Checked Exception
+					}
+				}
+			 
+		     2)	See below Code(Put try/catch block)
+		        public class Test {
+
+					public static void main(String[] args)
+					{
+						int a = 10/0;
+						try
+						{
+							throw new Exception("Not Possible");
+						} catch (Exception e) 
+						{
+							e.printStackTrace();
+						}
+					}
+				}
+	     	
 		
 --->>Throws Keyword 
  	-it roughly mean that give responsibility to other class to handle exception(e.g Owner>>Manager>>TeamLeader>>Member)		 
