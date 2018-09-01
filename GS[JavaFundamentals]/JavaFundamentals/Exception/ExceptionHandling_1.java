@@ -4,14 +4,18 @@ public class ExceptionHandling_1 {
 
 	public static void main(String[] args)
 	{
-		System.out.println(AmountAdder.addAmounts( new Amount("Dollar", 2) ,new Amount("Dollar", 10) ));
+		Amount obj1 = new Amount("Dollar", 10);
+		Amount obj2 = new Amount("Dollar", 20);
+		
+		System.out.println(AmountAdder.addAmounts(obj1, obj2));
+		
 	}
 
 }
 
-class CurrenctNotMatchException extends Exception
+class CurrencyNotMatchException extends Exception
 {
-	public CurrenctNotMatchException() 
+	public CurrencyNotMatchException() 
 	{
 		super("Currency Not Matched");
 	}
@@ -22,10 +26,10 @@ class Amount
 	String currency;
 	int amount;
 	
-	public Amount(String currency, int amount) 
+	public Amount(String c, int a) 
 	{
-		this.currency = currency;
-		this.amount = amount;
+		this.currency = c;
+		this.amount = a;
 	}
 }
 
@@ -35,13 +39,16 @@ class AmountAdder
 	{
 		if( !amount1.currency.equals(amount2.currency))
 		{
-			try {
-				throw new CurrenctNotMatchException();
-			} catch (CurrenctNotMatchException e) {
-				System.out.println("Currency not matched 1 -");
+			try 
+			{
+				throw new CurrencyNotMatchException();
+			} catch (CurrencyNotMatchException e) 
+			{
+				System.out.println(e);
 			}
 		}
-		return new Amount ( "Balance:", 10 );
+		
+		return new Amount("HI" , (amount1.amount + amount2.amount));
 		
 	}
 	
