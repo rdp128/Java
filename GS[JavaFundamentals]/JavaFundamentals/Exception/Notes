@@ -1,0 +1,22 @@
+--->>Throw Keyword 
+	-throw keyword is used to explicitly throw an exception.
+	-we can either throw checked or unchecked exceptions.
+	-it mainly used to throw user define exception.
+	-only throwable exception we can throw using throw keyword
+	
+	-Programmer is creating exception object and hand over  to JVM
+	
+	Syntax:
+		  
+		throw new AirthmeticException("Not Allowed");
+		  |   -----Creating Exception Object-------
+		  |
+		--Using throw keyword programmer hand over exception  object to JVM
+		
+--->>Throws Keyword 
+ 	-it roughly mean that give responsibility to other class to handle exception(e.g Owner>>Manager>>TeamLeader>>Member)		 
+	-used for method, constructors not for classes
+	-mainly used to handle checked exception if used it with unchecked ex there is no impact
+	
+	-
+	- 
