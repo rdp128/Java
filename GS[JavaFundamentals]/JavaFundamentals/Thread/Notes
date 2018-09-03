@@ -1,0 +1,33 @@
+
+Important notes on MultiThreading
+---------------------------------
+
+-Thread is a separate flow of execution. 
+-Every thread has a task. 
+-It's independent.
+
+Two type multitasking in JAVA
+i)Process based 
+ e.g. : - you open Chrome, calculator, MS Word, VLC player at the same time.
+ 
+ 
+ii)Thread based (MultiThread)
+ e.g. : - you open MS Word there -you typing --> one thread handling that
+ 								 -checking for spelling mistake --> second thread handling that
+ 					
+ Creating thread 
+ ---------------
+ 1)Using extending thread class
+   -check creatingThread_1.java
+   
+   WHY THREAD CLASS start() method invoked?
+   -it's responsible to register thread with thread scheduler and all other mandatory activity hence without executing 
+    thread class start() method there is no chance of starting thread in java due to this, it's consider heart of multi thread.
+   
+   RULE:
+   -when you overload run() method only without arguments run() method works in multi thread.
+   -you only have to wtire(override) run method when you extends Thread class if you use other name then run() it's not works.
+   -order of executing thread is unknown.
+   -Don't override start() method if you do then your thread is not running mean multi thread concept is not works.
+   
+    								 				
