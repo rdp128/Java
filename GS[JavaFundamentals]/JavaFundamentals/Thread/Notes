@@ -14,9 +14,9 @@ i)Process based
 ii)Thread based (MultiThread)
  e.g. : - you open MS Word there -you typing --> one thread handling that
  								 -checking for spelling mistake --> second thread handling that
- 					
- Creating thread 
- ---------------
+ 					 					
+ ==>Creating thread 
+ ------------------
  1)Using extending thread class
    -check creatingThread_1.java
    
@@ -29,5 +29,59 @@ ii)Thread based (MultiThread)
    -you only have to wtire(override) run method when you extends Thread class if you use other name then run() it's not works.
    -order of executing thread is unknown.
    -Don't override start() method if you do then your thread is not running mean multi thread concept is not works.
+   -if we restart same thread again then we got error
    
-    								 				
+ 2)Implementing Runnable    
+ 	-it's in java.lang package
+ 	-it contains only one method public  abstract void run() method
+ 
+ ==>Which one is Better?
+  -Implementing Runnable  is better because if we have another class we can extends it or if we have another interface we can use it as well
+   but by extending thread method we can't do that because java doen't support mulitple inheritance
+   
+ ==>Thread Class Constructor:
+   
+   1)Thread(): Thread t = new Thread();
+   2)Thread(Runable Target): 
+     - MyThread myThread = new MyThread();
+     - Thread t = new Thread(myThread)
+     - Thread(String name): Thread t = new Thread("Rohan Thread")
+       e.g. check ThreadConstructor.java
+       -To provide our thread name we use this
+     
+   
+  ==> Important method of Thread
+    1)void start() : To start thread and call run method inside your thread class
+    
+    2)Static Thread currentThread() :it returns reference to currently executing thread object. In short return thread name,thread priority, thread group
+      e.g System.out.println(Thread.currentThread());
+      
+    3)String getName() - return name of thread 
+    e.g. System.out.println(Thread.currentThread().getName());
+    
+    4)String setName() - change name
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   									 				
