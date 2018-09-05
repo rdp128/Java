@@ -14,7 +14,9 @@ i)Process based
 ii)Thread based (MultiThread)
  e.g. : - you open MS Word there -you typing --> one thread handling that
  								 -checking for spelling mistake --> second thread handling that
- 					 					
+
+   
+******************************************************				 					
  ==>Creating thread 
  ------------------
  1)Using extending thread class
@@ -38,7 +40,8 @@ ii)Thread based (MultiThread)
  ==>Which one is Better?
   -Implementing Runnable  is better because if we have another class we can extends it or if we have another interface we can use it as well
    but by extending thread method we can't do that because java doen't support mulitple inheritance
-   
+    
+******************************************************  
  ==>Thread Class Constructor:
    
    1)Thread(): Thread t = new Thread();
@@ -50,7 +53,8 @@ ii)Thread based (MultiThread)
        -To provide our thread name we use this
      
    
-  ==> Important method of Thread
+******************************************************  
+  ==>Important method of Thread
     1)void start() : To start thread and call run method inside your thread class
     
     2)Static Thread currentThread() :it returns reference to currently executing thread object. In short return thread name,thread priority, thread group
@@ -61,15 +65,44 @@ ii)Thread based (MultiThread)
     
     4)String setName() - change name
    
+    
+******************************************************  
+  ==>Thread Priority 
+    -it's determine how thread should be treated with respect to each other
+    -valid range 1-10. 1-Minimum 10-Maximum
+     Thread.MIN_PRIORITY -1
+     Thread.NORM_PRIORITY - 5
+     Thread.MAX_PRIORITY - 10
+     
+     Main Thread Priority - 5 
+    
    
+******************************************************   
+  ==>yield() Method
+	- it used to pause temporarily to currently executing thread and allow other 
+	  waiting thread to execute.
+	  
+	-if we have too many thread and one thread took 10 hour to complete then other have to wait for their turn and execute so if we use 
+	 yield() method then 10 hours thread pause and allow other thread to execute first. But this is not supported by all paltform
+	 
+  ==>join() method
+    -if thread want to wait until completing some other thread then we used it.
+    -we have to handle intrreptedException using try/catch or throws keyword
+    
+  
+  
+  ==>sleep() method	   
+    -it use to sleep temporarily to currently executing thread for specific number of seconds
    
+  ==>interrupt() method
+    -A thread can interrupt a sleeping thread or waiting thread by using interrupt() method of thread class
+    	 
    
-   
-   
-   
-   
-   
-   
+******************************************************
+   ==>Deadlock: When two thread are waiting for each other for infinite period of time then deadlock occur.
+    -join method when child class wait for main thread and main thread wait for child class then this happen e.g. JoinMethod.java & JoinMethod_1.java
+    -when main class wait for main class(itself) to finish it.
+    
    
    
    

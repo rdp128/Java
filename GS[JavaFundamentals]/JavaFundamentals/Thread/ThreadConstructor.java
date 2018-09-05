@@ -6,7 +6,8 @@ class Thread101 implements Runnable
    @Override
 	public void run()
     {
-	  System.out.println(Thread.currentThread().getName());
+	  Thread.currentThread().setName("DRT"); //set name
+	  System.out.println(Thread.currentThread().getName()); //get name
 	}
    
  
