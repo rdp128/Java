@@ -13,7 +13,7 @@ class Thread104 extends Thread
 		for(int i=0; i<3; i++)
 		{
 			try {
-				th.join();
+				th.join(); //child thread is waiting for main thread to complete.
 			} catch (InterruptedException e) 
 			{
 				e.printStackTrace();

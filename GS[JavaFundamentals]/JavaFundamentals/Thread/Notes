@@ -1,20 +1,30 @@
+Process is instance of executing application.
+For ex. when you open new application in your computer you start new process that will run on that application.
+	- Process are heavy weighted. Its require their own separate memory in OS. that's why communication b/w two process takes time.
+	- Switching from one process to another is very expensive.
 
 Important notes on MultiThreading
 ---------------------------------
+Thread are light weight process. A thread class belongs to java.lang package.
 
--Thread is a separate flow of execution. 
--Every thread has a task. 
--It's independent.
+Simply, in layman’s term a thread is an independent working part of a program.
+
+Consider example of Whatsapp. In Whatsapp, a user is able to receive and send simultaneously. 
+This is because there are two threads in Whatsapp one for sending and other for receiving, both working simultaneously
+
+Advantage of Thread : Suppose one thread needs 10 minutes to get certain task, 10 threads used at a time could complete that task in 1 minute, because threads can run parallely.
+Threads consumes CPU in best possible manner, hence enables multi processing. Multi threading reduces idle time of CPU which improves performance of application.
+
 
 Two type multitasking in JAVA
-i)Process based 
+i)Process based : In process based multitasking or multiprocessing, Multiple processes are executed simultaneously that's why computer run
+                  two or more application simultaneously.
  e.g. : - you open Chrome, calculator, MS Word, VLC player at the same time.
  
  
-ii)Thread based (MultiThread)
+ii)Thread based (MultiThread) : In this multiple threads in a process are executed simultaneously
  e.g. : - you open MS Word there -you typing --> one thread handling that
  								 -checking for spelling mistake --> second thread handling that
-
    
 ******************************************************				 					
  ==>Creating thread 
@@ -89,22 +99,71 @@ ii)Thread based (MultiThread)
     -if thread want to wait until completing some other thread then we used it.
     -we have to handle intrreptedException using try/catch or throws keyword
     
-  
+    -need to call join() method whichever thread is waiting. e.g. if we want main thread to wait then call join() in main thread.
+                                                                  if we want child thread to wait then call join() in child thread.
   
   ==>sleep() method	   
     -it use to sleep temporarily to currently executing thread for specific number of seconds
    
   ==>interrupt() method
     -A thread can interrupt a sleeping thread or waiting thread by using interrupt() method of thread class
-    	 
+
+******************************************************
+THREAD SYNCHRINIZATION
+	 
+-When we start two or more threads within a program, there may be a situation when multiple threads try to access
+the same resource and finally they can produce unforeseen result due to concurrency issues
+
+-For example, if multiple threads try to write within a same file then they may corrupt the data because one of the
+threads can override data or while one thread is opening the same file at the same time another thread might be
+closing the same file
+
+-So there is a need to synchronize the action of multiple threads and make sure that only one thread can access the
+resource at a given point in time
    
 ******************************************************
    ==>Deadlock: When two thread are waiting for each other for infinite period of time then deadlock occur.
     -join method when child class wait for main thread and main thread wait for child class then this happen e.g. JoinMethod.java & JoinMethod_1.java
     -when main class wait for main class(itself) to finish it.
-    
+
+******************************************************
+Thread DUMP: More details visit : https://perfmatrix.blogspot.com/search?q=Thread
+
+When you take thread Dump, JVM will dumps all thread state in log files
+
+******************************************************
+Thread states:
+
+1. New 2. Runnable 3. Blocked 4. Waiting 5. Timed Waiting 6. Terminated
+
+1. New: This is the initial state of the thread. When a thread is created, it is in the new state. 
+   		The thread has not yet started to run when it is in this state. 
+
+2. Runnable State: A thread that is ready to run is moved from New to Runnable state. In this state, 
+	a thread might actually be running or it might be in Ready To Run state. 
+	Once the thread comes in the Runnable state then it occupies the CPU and starts processing the code. 
+	In this state, there is an intermediate state called "Ready To Run". 
+	Such state comes because every thread runs for a short while and then pauses and relinquishes the CPU to another thread 
+	so that other threads can get a chance to run. But all such threads lay under Runnable State whether they are in Ready To Run 
+	or currently running state. It is the responsibility of the thread scheduler to give chance to each thread to run.
+
+3. Blocked: A thread is in the blocked state when it tries to access a protected section of code that is currently locked by some other thread.
+   When the protected section is unlocked, the schedule picks the blocked thread and move it to Runnable state. 
+   In thread dump analysis, this state needs to keep in mind. 
+   We need to analyse which threads were in the blocked state and what was the reason?
+
+4. Waiting: When a thread is in the waiting state, it means the thread is waiting for the response from another thread to fulfil some 
+  conditions. Once the condition fulfils then thread moves from Waiting to Runnable state. Similar to Blocked state, Waiting state also 
+  plays an important role during thread dump analysis. We analyse which threads were in the waiting state and what was the cause?
+
+5. Timed Waiting: A thread lies in the state of timed waiting when it calls a method like wait(), sleep(), join(), park() with a timeout
+   parameter. A thread lies in this state until the timeout is completed or until a notification is received.
+
+6. Terminated: When a thread terminates then it frees the occupancy of CPU and no longer exists. A thread terminates when either 
+   the program has been executed completely or some unusual erroneous event, like segmentation fault or an unhandled exception occurred.
+
    
-   
+
    
    
    

@@ -33,7 +33,6 @@ public class JoinMethod {
 		t2.start();
 		t2.join(2000); //main thread is waiting for t2 thread if we provide join(2000) then if in 2 sec  child thread not finished then main thread is tarted
 		
-		
 		for(int i=0; i<5; i++)
 		{
 			System.out.println("Main Thread");

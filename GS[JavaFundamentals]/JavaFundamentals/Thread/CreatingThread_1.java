@@ -21,9 +21,8 @@ public class CreatingThread_1 {
 	public static void main(String[] args) 
 	{
 		MyThread t = new MyThread();
-		
-		Thread th = new Thread(t);
-		th.start(); //starting thread using start method
+	
+		t.start(); //starting thread using start method
 		
 		for(int i=0; i<5; i++)
 		{
