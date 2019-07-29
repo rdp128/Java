@@ -161,6 +161,21 @@ Thread states:
 
 6. Terminated: When a thread terminates then it frees the occupancy of CPU and no longer exists. A thread terminates when either 
    the program has been executed completely or some unusual erroneous event, like segmentation fault or an unhandled exception occurred.
+   
+******************************************************
+   join() vs yield() vs sleep()
+   
+If thread want to pause its execution to give the chance for remaning threads of same priority then we should user yield() method.
+
+If thread wants to wait until completing some other thread to execution then we should use join() method.
+
+If thread don't want to perform any operation for particular amount of time the we should use sleep() method.
+
+
+Yield is not overloaded 	|join is overloaded | Sleep is overloaded
+							|
+Doesn't throw          		|join and sleep thorows Interreptedepted 
+Interreptedepted Exception  | 					 
 
    
 
