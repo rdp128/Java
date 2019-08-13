@@ -1,36 +1,53 @@
 package Numbers;
 
+import java.util.Scanner;
+
+////45 = 45*45 = 2025(add it from anywhere i.e 2+025 , 202+5) = 20+25=45
+//If right side has Zero not Kaprekar number
+//1 is Kaprekar number
+
 public class Kaprekar {
 	
 	public static void main( String[] args)
 	{
+		System.out.println("Enter No: ");
+		Scanner sc = new Scanner(System.in);
+		int n= sc.nextInt(); //45
+		              //1234--String index
+		int sq = n*n; //2045
 		
-		for(int i=4; i<=10000; i++)
+		System.out.println("Squre "+ sq);
+		String s = "0" + sq;//To handel special condition 1 is Kaprekar number
+		int sum=0, lp, rp,count=0;
+		boolean isKaprekar=false;
+		
+		for(int i=1; i<s.length(); i++) //i=1 ..1<4..Y|| i=2..2<4..Y ||
 		{
-			int sqaure = (int)Math.pow(i, 2);
+			lp = Integer.parseInt(s.substring(0,i)); //lp = s(0,1)=2 || s(0,2)=20
+			rp = Integer.parseInt(s.substring(i)); //rp=s(1)=045 ||s(2)=45
 			
-			int len = Integer.toString(sqaure).length()/2;
+			System.out.println("lp " + lp + " |rp " + rp);
 			
-			String strSq = Integer.toString(sqaure);
-			
-			String p1 = strSq.substring(0, len);
-			int part1 = Integer.parseInt(p1);
-			
-			String p2 = strSq.substring(len);
-			int part2 = Integer.parseInt(p2);
-			
-			
-			
-			int add = part1 + part2;
-			
-			if(add == i)
+			if(rp == 0)
 			{
-				System.out.println(i +"\t" + sqaure + "\t" + part1+" + " + String.format("%02d", part2));
+				break;
 			}
-			
+			if(lp+rp == n)
+			{
+				isKaprekar = true;
+				System.out.println("Pair Found:" + lp + "+" + rp + "=" + n);
+				count--;
+				
+			}count++;
 			
 		}
+		if(isKaprekar)
+		{
+			System.out.println("Yes it is Kaprekar Number");
+		}
+		else System.out.println("No it's not Kaaprekar Number");
 		
+		System.out.println("Total check " + count);
 	}
 
 }
