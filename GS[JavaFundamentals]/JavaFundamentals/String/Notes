@@ -1,0 +1,46 @@
+*******************
+   String Notes
+*******************
+Ref: https://www.youtube.com/watch?v=3BLN2-Eo1CY&list=PLbGui_ZYuhij8Oplrvjt_RlDliZQgdxoV&index=258 (Start from video no. 265)
+																							 *
+String Constant Pool (SCP) : It is specially designed memory area for string objects.        *              Heap Area  | SCP Area
+  						   																	 *		st1-->	 Rohan     | Rohan <--st2		
+																							 *      st3-->   Rohan     |
+String st1 = new String("Rohan") (Object create in both heap & SCP)
+String st2 = "Rohan"(Object create in SCP if object is already present than it's point it to current one if not otherwise it will create new obj.)
+String st3 = new String("Rohan") //create new object in Heap area & in SCP area it's already there so not create
+
+if(st1 == st3) //false
+if(st1 == st2) //false
+                        
+*******************                      
+String Intern : We can use intern method to get corresponding SCP object reference by using Heap Obj. reference .
+
+String Buffer:is used for strings that will be modified. is Mutable
+     
+   StringBuffer st = new StringBuffer("Rohan");
+   st.append("Patel");
+    
+   to create SB : StringBuffer sb = new StringBuffer("Rohan");
+      
+   SB Constructor : SB create new empty SB Obj. Initial capacity is 16 
+     				If you want to store more char. (Current capacity + 1)*2
+     				
+                    StringBuffer sb = new StringBuffer("Rohan"):
+                    Syste.out.println(sb.capacity()); //16+5 = 21
+                    
+                    append Method will append char,int,double,float,long,boolean all DataType				 
+String Builder: Every method in DB is synchronized so only one thread is allowed to operate on SB obj. at a time which may create performance problem. 
+ 				USing String Builder we can solve this problem because multiple thread are allowed on SB obj.
+
+           SBuffer is thread safe but SBuilder is not thread safe
+           
+When we use String, SBuffer and SBuilder?
+String - If content is fixed and it will not change frequently 
+SBUffer - If content is not fixed and may required changes in future but thread safe is require
+SBUilder - If content is not fixed and may required changes in future but thread safe is not require
+
+
+
+
+   	
