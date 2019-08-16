@@ -1,0 +1,225 @@
+Questions:
+
+1)Find if the given number is the power of 10
+2)Floyd Triangle
+3)ArmStrong Number
+4)Write a function that return the first non repeating Character in String
+  Ex:1 I/O : apple O/P: a
+  Ex:2 I/O :papaya O/P: y
+--------------------
+
+Given an array of integers, find count of pair of numbers whose sum is equal to a specific number passed as parameter.
+Input - Parameter 1: Int[] array = {1,2,3,4,5} , Parameter 2: 7
+Output – 2 (2 pairs : 2,5 ; 3,4)
+
+
+
+Find the dot product of two arrays along with exception handling in case of wrong inputs.
+
+
+
+Reorder the numbers in an int array using Bubblesort
+
+
+
+Find the second smallest number from a given array
+
+
+
+Find the smallest number in an array using the log on n
+
+
+
+Create a program to search a given number in an int array using Binary Search
+
+
+
+Find the each person average from given input
+String ss[][]={{"Bobby", "87" },
+{ "Charles", "100" },
+{ "Eric", "64" },
+{ "Charles", "22" } };
+
+
+
+A string array is given containing the addresses of sites accessed, each string consisting IP addresses in the beginning followed by a space and then the complete address. Write a function that returns a string containing only the IP address(es) which were accessed maximum number of times.
+Example:
+Scenario 1-
+Input : {“10.0.1.45 -/d/in/intheclass”,”10.0.1.45 -/a/facts/final…/bhgahf”,”10.3.54.123 -/d/xyz/bcc/yes”}
+Output :”10.0.1.45”
+
+Scenario 2-
+Input : {“10.0.1.45 -/d/intheclass”,”10.0.1.45 -/a/facts/final…/bhgahf”,”10.45.23.34 -/x/new/car/honda”,”10.3.54.123 -/d/random/city/lucknow” ,”10.3.54.123 -/d/rich/family/do”}
+Output :”10.0.1.45 10.3.54.123”
+
+
+
+Given a string, remove the consecutive character pairs repetitively.
+input: saabbs , output : sabs
+input: aaabbbccc , output : abc
+
+
+
+Given a string find the start index and count of character repeating maximum times (continuous)
+Input – Parameter: aabbbbbcAAA
+Output - <2, 5> ( ‘b’ startIndex of is 2 and count is 5)
+
+
+
+Write a function that returns the first non-repeating character in String.
+Example 1:
+Input : ”apple”
+Output: ‘a’
+Example 2:
+Input : “papaya”
+Output: ‘y’
+Questions asked: What is the default value can be returned if all the characters are repeating.
+What are all the corner test cases can be added.
+What are all the ways by which we can exit any method
+
+
+
+Given a string, write a program to check if it is palindrome or not. A string is said to be palindrome if reverse of the string is same as string. For example, “abba” is palindrome, but “abbc” is not palindrome.
+
+
+
+Given a string check if it is Pangram or not. A pangram is a sentence containing every letter in the English Alphabet.
+
+Examples : The quick brown fox jumps over the lazy dog ” is a Pangram [Contains all the characters from ‘a’ to ‘z’]
+“The quick brown fox jumps over the dog” is not a Pangram [Doesn’t contains all the characters from ‘a’ to ‘z’, as ‘l’, ‘z’, ‘y’ are missing]
+
+
+
+Given a String find the characters(From A-Z) which are not present in that string in alphabetical order
+
+
+
+Write a program to reverse letters in a string?/ Reverse the string of characters without using a built in function
+input : saabbs
+output :sbbaas
+
+
+
+For a string input the function returns output encoded as follows:
+Input "" Output ""
+Input a Output a1
+Input aa Output a2
+Input aabb Output a2b2
+Input aaabb Output a3b2
+Why we should use MVC in our application ?
+Explain what is Agile Framework.
+
+
+
+The Fibonacci numbers are the numbers in the following integer sequence.
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 . . .
+Given a specific number in this series Fn, your program needs to find the sum of all the numbers in the Fibonacci series that are smaller or equal to that number
+Input - 8
+Output: 20 (Sum of the numbers less than 8 in the fibonacci series. 0 + 1 + 1 + 2 + 3 + 5 + 8)
+Questions asked: Memory and Runtime of the written Algorithm
+
+
+
+Write a function to print nth number in Fibonacci series?
+input : length of the fibonacci Series - 4
+output : 2
+input : length of the fibonacci Series - 6
+output : 5
+
+
+
+Find if the given number is the power of 10
+
+
+
+Swap two numbers without using a third variable
+
+
+
+Check whether a given number is prime or not.
+
+
+
+Check if a given number is an Armstrong or not.
+Note- A number is armstrong if the sum of the cubes of digit of number is equal to the number.
+ex- 407 = 4*4*4 + 0*0*0 + 7*7*7
+
+
+
+Problem Statement: Add the two given fractions (ex- 3/9 and 2/6) and return the resulting fraction in the simplest form.
+
+
+
+Find closest square root of a number by using an given custom formula which is in problem statement(check Newton Rapson method)
+
+
+
+Create a Floyd triangle by getting the input from the user on the number of rows he wants in the Floyd triangle
+Note- Floyd Triangle is like
+1
+2 3
+4 5 6
+7 8 9 10
+
+
+
+Find out the Robot end position – Implement a method walk(String path) where path is the set of command to move the Robot. Move the ROBOT in U, D, L, R direction i.e Up, Down, Left, Right direction. Implemented method should return the x and y co-ordinate of the robot as an Integer array.
+Example:
+Scenario 1-
+Input : (“UUU”)
+Output : (new Integer[0, 3])
+
+Scenario 1-
+Input : (“UDLRURL”)
+Output : (new Integer[1, 2])
+
+Note : Exclude other characters.
+
+
+
+Write logic for insertion and check for value presence in Binary Search tree(BST) using in- order traversal.
+
+
+
+Given a half ordered list. Find the smallest no. Which is unordered. Method should have 0(log n ) runtime
+Eg-[2,3,4,1]
+1 should be in the first but it's in the last.
+O/p:1,
+
+
+
+To find the number of steps to complete a ‘cycle’ in an array, given the starting index. The value of the element present in the given index would give you the next index and so on, once to come back to the same position, it is said to have completed a cycle. For example, if the array is- {2,4,1,0,5,3 } and the starting index is 0, the number of steps to complete the cycle would be 5.
+
+
+
+Return the list of prime factors of given number, Understand the test case logic and add more test cases.
+Ip : 5 op: 5
+ip : 10 op : 2,5
+ip:100 op : 2,2,5,5
+ip : 49 op : 7,7
+ip : -49 op : -49
+
+
+
+Write program for Fibonacci series in O(n) time and O(1) space?
+
+
+
+Calculate the power of given number considering all conditions like base as 0, exponent as 0 and exponent as negative. The code must be faster than O(exponent).
+Input : (2,3) output : 8
+Input : (2,-3) output : 0.125
+
+
+
+Find the each student marks from given input.
+String ss[][]={{"Bobby",{ "87",”83”,”88”,”85” },
+{ "Charles", { "100",”94”,”92”,”90”},
+{ "David", { "56",”58”,”54”,”59” },} };
+Calculate average marks and grades of these students.
+Test Case:1-If mark is above 90, then return Grade A.
+Test Case:2-If mark is between 80-90, then return Grade B.
+Test Case:3- If mark is below 60, then return Grade C.
+
+
+
+ 
