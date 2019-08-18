@@ -21,5 +21,15 @@ public class CapitalFirstLetter {
 			output = st1.toUpperCase() + st.substring(1);
 			System.out.print(output + " ");	
 		}
+		
+		//Method:2
+		/*for(int i=0; i<starray.length; i++)
+		{
+			int j=1;
+			//System.out.println(String.valueOf(st[i].charAt(0)).toUpperCase());
+			//output += String.valueOf(st[i].charAt(0)).toUpperCase() + String.valueOf(st[i].substring(i+1)) ;
+			System.out.print( (String.valueOf(starray[i].charAt(0)).toUpperCase()) + (String.valueOf(starray[i].substring(j)) + " "));
+			j++;
+		}*/
 	}
 }
