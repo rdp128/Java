@@ -11,7 +11,7 @@ public class RemoveConsecutiveRepeatedChar {
 
 	public static void main(String[] args) 
 	{
-		String str = "aaaabbbcccbbbaaa";
+		String str = "aaaabbbcccbbbaaaAA".toLowerCase();
 		String output = str.valueOf(str.charAt(0));
 		
 		for(int i=1; i<str.length(); i++)
