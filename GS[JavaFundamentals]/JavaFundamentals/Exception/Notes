@@ -1,6 +1,28 @@
-Checked Exception ==> Always have to handle it 
-UnChecked Exception ==> not worry about it to  handle it 
+Exception:An Exception is considered as problem, which stops program execution 
+from continuation from the point of occurrence of it.
 
+*******************
+Why Exception Occur?
+-User error : Wrong user input i.e.Number divide by 0
+-programmer error: ArrayOutOfBound i.e. array size is 10 and try to add more than 10 element.
+-Resources error: File not exists.
+
+What is Exception Handling: It is a mechanism to handle run time error.
+
+Advantage: Maintain the normal flow of program.(After exception occur rest of your code will execute.)
+           Meaningful error reporting. (It will give you idea of what error is occur)
+
+Disadvantage: Your program will crash.
+
+*******************
+Exception Hierarchy : https://www.benchresources.net/wp-content/uploads/2017/02/exception-hierarchy-in-java.png
+
+Checked Exception(Compile time exception)  ==> Always have to handle it 
+
+    example: IOEXception(FileNOtFoundException), SQLException
+
+UnChecked Exception(Runtime Exception) ==> not worry about it to  handle it 
+    example: NullPointerException, IndexOutOfBoundsException(ArrayIndexOutOfBoundsException, StringINdexOutOfBoundsExceptions)
 
 --->>Throw Keyword 
 	-throw keyword is used to explicitly throw an exception.

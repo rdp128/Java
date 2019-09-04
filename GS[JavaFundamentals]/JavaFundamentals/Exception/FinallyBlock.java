@@ -13,24 +13,24 @@ public class FinallyBlock {
 	{
 		try
 		{
-			int c = 10/2;
+			int c = 10/0;
 			System.out.println("C : " + c);
 			System.out.println("prog. Continue");
 			
 		}
 		catch(ArithmeticException e)
 		{
-			//int d = 12/0;
+			int d = 12/0;
 			System.out.println("Not Possible");
 		}
 		
 		finally
 		{
-			//int d = 12/0;
+			int d = 12/0;
 			System.out.println("Finally Block");
 		}
 		
-		//int d = 12/0;
+		int d = 12/0;
 		System.out.println("End of the prog.");
 		
 	}
