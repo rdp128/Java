@@ -24,6 +24,8 @@ Checked Exception(Compile time exception)  ==> Always have to handle it
 UnChecked Exception(Runtime Exception) ==> not worry about it to  handle it 
     example: NullPointerException, IndexOutOfBoundsException(ArrayIndexOutOfBoundsException, StringINdexOutOfBoundsExceptions)
 
+*******************
+
 --->>Throw Keyword 
 	-throw keyword is used to explicitly throw an exception.
 	-we can either throw checked or unchecked exceptions.
@@ -84,11 +86,30 @@ UnChecked Exception(Runtime Exception) ==> not worry about it to  handle it
 					}
 				}
 	     	
+*******************
 		
 --->>Throws Keyword 
  	-it roughly mean that give responsibility to other class to handle exception(e.g Owner>>Manager>>TeamLeader>>Member)		 
 	-used for method, constructors not for classes
 	-mainly used to handle checked exception if used it with unchecked ex there is no impact
 	
-	-
-	- 
+	throw    								vs.					throws
+1)It used to explicitly throw an exception	 |    1)It used to declare an Exception
+2)throw use within the method				 |    2)throws used with method signature
+3)you can not throw multiple exceptions.     |    3)you can declare nultiple exception
+											 |	   i.e - public void method()thoew IOException, SQLException
+
+*******************												   
+User Define Exception:
+-need to inherit Exception class in order to act as eception.
+-throw keyword used to throw this kind of exception
+
+class MyException extends Exception/RuntimeEsception
+{
+
+}
+
+-Any class which extends Exception will be user define Checked exception class
+-Any class which extends RuntimeException will be user define  RuntimeException class
+
+Please check - ExceptionHandling_1.java and UserDefineCheckedException.java
