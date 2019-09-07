@@ -2,44 +2,44 @@ package Collections;
 
 
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.Iterator;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class ArraylistExample {
 	
 	
 	public static void main(String[] args) {
 		
-		ArrayList<Integer> list = new ArrayList<Integer>();
-		Scanner sc = new Scanner (System.in);
+	    final CopyOnWriteArrayList<String> list1 =  new CopyOnWriteArrayList<String>();
 		
-		System.out.println("Enter numbers");
 		
-		String st = sc.nextLine();
-		
-		String [] str = st.split(" ");
-		
-		for(String value:  str)
-		{
-			list.add(Integer.parseInt(value));
-		}
-		
-		int minimum = list.get(0);
-		int maximum = list.get(0);
-		int sum = 0;		
-		for (Integer print : list) {
-			sum += print;
-			if(print < minimum)
-			{
-				minimum = print;
-			}
-			if(print > maximum)
-			{
-				maximum =  print;			}
-		}
-		System.out.println("Minimum: " + minimum);
-		System.out.println("Maximum: " + maximum);
-		System.out.println("Average is: " + (double) sum/list.size());
+	    list1.add("1");
+	    list1.add("2"); 
+	    list1.add("3");
+	    list1.add("4");
+	    
+	   new Thread()
+	   {
+		   public void run() 
+		   {
+			   Iterator<String> it = list1.iterator();
+			   while(it.hasNext())
+			   {
+				   System.out.println(it.next());
+			   }
+			   
+		   };
+	   }.start();;
+	   
+	   new Thread()
+	   {
+		   public void run() 
+		   {
+			   System.out.println("Adding Rohan at index 1");
+			   list1.add(1,"Rohan");
+			   
+		   };
+	   }.start();;
 		
 	}
 		
