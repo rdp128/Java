@@ -1,0 +1,48 @@
+ArrayList
+
+-Duplicate and null values allowed
+-Maintained insertion order
+-Default capacity - 10 
+-if array size is full then ArrayList size will be increase -> Current Capacity * 3/2 -> by 50%
+-It used Dynamic Array,grow-able internal data structures.
+
+ArrayList is worst for Insert and Delete 
+Shift Operation bad choice for insertation and deletetion
+ArrayList implements Random Access Interface (it inside Marker interface) because of this it faster in searching elements
+When to use ArrayLis?
+-Retrieval operation (Search Operation)
+-Heterogeneous element possible
+
+-----------ArrayList Vs Vector-----------------
+When we don't define generic type of list, by default JVM takes it as an object type list.
+ArrayList list = new ArrayList<>(); //Object obj = new Object[10]; 
+list.add(1);    					//obj[0]= new Integer(1);
+list.add(true);						//obj[1=  new Boolean(true);
+
+Vector is threadSafe(Most of the method) and arrayList is not thread safe so ArrayList is faster
+-But we can make ArrayList as thread safe using Collections.synchronizedList() method.
+-ArrayList is good for memory management. Vector is not good. because Arraylist increase it size by 50% and vsctor increase it size by 100%
+-If we have concurrent environment then we will use CopyOnWriterArrayList for arrayLisy
+
+-Iterator can be use with all collection implementation
+-With vector we can use either vector of Enumerator to iterate each element.
+
+Vector
+Implements Random Access interface
+With vector we can use either vector of Enumerator to iterate each element.
+
+---------------------
+
+
+LinkedList
+
+Watch for implementation : https://www.youtube.com/watch?v=qWgiwpfB_u4&list=PLEH2kL-crMGHcVkCsiHSIE9wloVSHAkGt&index=7
+
+---------------------
+
+Vector
+
+HashSet
+
+
+HashMap
