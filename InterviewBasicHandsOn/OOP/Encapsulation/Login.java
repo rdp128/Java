@@ -15,7 +15,7 @@ import java.io.Serializable;
 public class Login implements Serializable
 {
 	private String name;
-	private transient String pass;
+	private transient String pass; 
 	
 	public String getName() {
 		return name;
