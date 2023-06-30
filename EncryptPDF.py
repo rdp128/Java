@@ -4,7 +4,7 @@ import sys
 import os
 
 # Check if the correct number of arguments is provided
-#Copy all PDFs to current python dir and run --> .\EncryptPDF.py <PASSWORD> *.pdf
+# Copy all PDFs to current python dir and run --> .\EncryptPDF.py <PASSWORD> *.pdf OR  .\EncryptPDF.py <PASSWORD> <file1> <file2>
 #
 
 if len(sys.argv) < 3:
